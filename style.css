@@ -1,0 +1,20 @@
+.h1 {
+    text-align: center;
+    background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--F7w_snYb--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vda3askm2sbfjl717q9q.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(207, 100%, 81%);
+    padding: 20px;
+    text-shadow: black 1px 1px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+}
+
+.inputWrapper {
+    padding: 15px;
+    font-size: 24px;
+}
+
+.searchBtnWrapper {
+    padding: 8px;
+}
