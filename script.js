@@ -1,7 +1,7 @@
 // define variables
 let searchBtn = document.getElementById("searchBtn");
-let cityInput = document.getElementById("cityInput");
-let cityName = cityInput.value.trim();
+var cityInput = document.querySelector('#cityInput');
+let subForm = document.querySelector('#submissionForm');
 let currentForecast = document.getElementById("currentForecast");
 let day1 = document.getElementById("day1");
 let day2 = document.getElementById("day2");
@@ -12,6 +12,7 @@ let day5 = document.getElementById("day5");
 // prevent default, reset input box, alert if input empty
 let reset = function(event) {
     event.preventDefault();
+    let cityName = cityInput.value.trim();
     if (cityName) {
       callFunction(cityName);
       cityInput.textContent = '';
@@ -28,7 +29,7 @@ let callFunction = function(cityName) {
     fetch(weatherAPI).then(function(response) {
         if (response.ok) {
           response.json().then(function(data) {
-              console.log(data);
+            console.log(data);
             // pass response data to dom function
             domFunction(data);
           });
@@ -50,8 +51,7 @@ let domFunction = function() {
 // create button with last searched city as name, rerun application when clicked 
 
 // search button event listener
-searchBtn.addEventListener("click", callFunction);
+subForm.addEventListener('submit', reset);
 
 // open weather api key
 // 65e4e58787a7fd23ec32767cf0dce3ec
-
