@@ -30,7 +30,7 @@ let callFunction = function(cityName) {
           response.json().then(function(data) {
             console.log(data);
             // pass response data to dom function
-            domFunction(data);
+            titleFunction(data);
           });
         }
         else {
@@ -42,14 +42,27 @@ let callFunction = function(cityName) {
       });
   };
 
-// pass returned data into divs
-let domFunction = function(data) {
-
-    for (var i = 0; i < data.length; i++) {
-        let dataName = data[i].city.name;
-        document.getElementById('currentForecast').textContent = "Current Weather for " + dataName;
-    };
+// pass city name data into title div
+let titleFunction = function(data) {
+        let dataName = (data).city.name;
+        document.getElementById('currentTitle').textContent = "Current Weather for " + dataName;
+        forecastFunction(data);
 };
+
+// pass forecast data into day1-6 divs
+let forecastFunction = function(data) {
+
+    let currentTemp = (data).list[0].main.temp
+    let currentHumid = (data).list[0].main.humidity
+    let currentWind = (data).list[0].wind.speed
+    document.getElementById('currentInfo').textContent = "Temperature: " + currentTemp + "Wind speed: " + currentWind + "Humidity: " + currentHumid
+
+    let day1Temp = (data).list[1].main.temp
+    let day1Humid = (data).list[1].main.humidity
+    let day1Wind = (data).list[1].wind.speed
+    document.getElementById('day1').textContent = day1Temp + day1Wind + day1Humid
+
+} // close forecastFunction
 
 // create button with last searched city as name, rerun when clicked 
 

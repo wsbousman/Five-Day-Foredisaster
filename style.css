@@ -19,8 +19,14 @@
     padding: 8px;
 }
 
-.col-8 {
-    font-size: 40px;
+.currentTitle {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: black 1px 1px;
+}
+
+.currentInfo {
+    font-size: 22px;
     font-family: 'Raleway', sans-serif;
     text-shadow: black 1px 1px;
 }
