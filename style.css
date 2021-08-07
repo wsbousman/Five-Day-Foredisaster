@@ -20,7 +20,7 @@
 }
 
 .currentTitle {
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Raleway', sans-serif;
     text-shadow: black 1px 1px;
 }
@@ -29,4 +29,11 @@
     font-size: 22px;
     font-family: 'Raleway', sans-serif;
     text-shadow: black 1px 1px;
+}
+
+.fiveDay {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: black 1px 1px;
+    padding: 15px 0px 15px 0px;
 }
