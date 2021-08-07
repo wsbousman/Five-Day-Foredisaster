@@ -72,7 +72,7 @@ let forecastFunction = function(data) {
     let currentTemp = (data).list[0].main.temp
     let currentHumid = (data).list[0].main.humidity
     let currentWind = (data).list[0].wind.speed
-    document.getElementById('currentInfo').textContent = "Temperature(?): " + currentTemp + "          Wind speed(mph): " + currentWind + "          Humidity(%): " + currentHumid
+    document.getElementById('currentInfo').textContent = "Temperature(K): " + currentTemp + "          Wind speed(mph): " + currentWind + "          Humidity(%): " + currentHumid
     document.getElementById('fiveDay').textContent = "Five Day Forecast"
 
     // day 1
@@ -80,7 +80,7 @@ let forecastFunction = function(data) {
     let day1Humid = (data).list[1].main.humidity
     let day1Wind = (data).list[1].wind.speed
     document.getElementById('day1Date').textContent = reformat1
-    document.getElementById('day1Temp').textContent = "Temperature(?): " + day1Temp
+    document.getElementById('day1Temp').textContent = "Temperature(K): " + day1Temp
     document.getElementById('day1Wind').textContent = "Wind speed(mph): " + day1Wind
     document.getElementById('day1Humid').textContent = "Humidity(%): " + day1Humid
 
@@ -89,7 +89,7 @@ let forecastFunction = function(data) {
     let day2Humid = (data).list[2].main.humidity
     let day2Wind = (data).list[2].wind.speed
     document.getElementById('day2Date').textContent = reformat2
-    document.getElementById('day2Temp').textContent = "Temperature(?): " + day2Temp
+    document.getElementById('day2Temp').textContent = "Temperature(K): " + day2Temp
     document.getElementById('day2Wind').textContent = "Wind speed(mph): " + day2Wind
     document.getElementById('day2Humid').textContent = "Humidity(%): " + day2Humid
 
@@ -98,7 +98,7 @@ let forecastFunction = function(data) {
     let day3Humid = (data).list[3].main.humidity
     let day3Wind = (data).list[3].wind.speed
     document.getElementById('day3Date').textContent = reformat3
-    document.getElementById('day3Temp').textContent = "Temperature(?): " + day3Temp
+    document.getElementById('day3Temp').textContent = "Temperature(K): " + day3Temp
     document.getElementById('day3Wind').textContent = "Wind speed(mph): " + day3Wind
     document.getElementById('day3Humid').textContent = "Humidity(%): " + day3Humid
 
@@ -107,7 +107,7 @@ let forecastFunction = function(data) {
     let day4Humid = (data).list[4].main.humidity
     let day4Wind = (data).list[4].wind.speed
     document.getElementById('day4Date').textContent = reformat4
-    document.getElementById('day4Temp').textContent = "Temperature(?): " + day4Temp
+    document.getElementById('day4Temp').textContent = "Temperature(K): " + day4Temp
     document.getElementById('day4Wind').textContent = "Wind speed(mph): " + day4Wind
     document.getElementById('day4Humid').textContent = "Humidity(%): " + day4Humid
 
@@ -116,7 +116,7 @@ let forecastFunction = function(data) {
     let day5Humid = (data).list[5].main.humidity
     let day5Wind = (data).list[5].wind.speed
     document.getElementById('day5Date').textContent = reformat5
-    document.getElementById('day5Temp').textContent = "Temperature(?): " + day5Temp
+    document.getElementById('day5Temp').textContent = "Temperature(K): " + day5Temp
     document.getElementById('day5Wind').textContent = "Wind speed(mph): " + day5Wind
     document.getElementById('day5Humid').textContent = "Humidity(%): " + day5Humid
 
