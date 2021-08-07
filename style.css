@@ -18,3 +18,9 @@
 .searchBtnWrapper {
     padding: 8px;
 }
+
+.col-8 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: black 1px 1px;
+}

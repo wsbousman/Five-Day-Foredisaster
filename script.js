@@ -1,6 +1,6 @@
 // define variables
 let searchBtn = document.getElementById("searchBtn");
-var cityInput = document.querySelector('#cityInput');
+let cityInput = document.querySelector('#cityInput');
 let subForm = document.querySelector('#submissionForm');
 let currentForecast = document.getElementById("currentForecast");
 let day1 = document.getElementById("day1");
@@ -19,8 +19,7 @@ let reset = function(event) {
       cityInput.value = '';
     } else {
       alert('Please enter a city.');
-    }
-  };
+    }};
 
 // api call
 let callFunction = function(cityName) {
@@ -44,11 +43,15 @@ let callFunction = function(cityName) {
   };
 
 // pass returned data into divs
-let domFunction = function() {
-    
-}
+let domFunction = function(data) {
 
-// create button with last searched city as name, rerun application when clicked 
+    for (var i = 0; i < data.length; i++) {
+        let dataName = data[i].city.name;
+        document.getElementById('currentForecast').textContent = "Current Weather for " + dataName;
+    };
+};
+
+// create button with last searched city as name, rerun when clicked 
 
 // search button event listener
 subForm.addEventListener('submit', reset);
